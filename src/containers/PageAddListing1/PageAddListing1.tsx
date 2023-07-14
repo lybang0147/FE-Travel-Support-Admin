@@ -192,7 +192,7 @@ const PageAddListing1: FC<PageAddListing1Props> = ({
     {
       setIsProcessing(true);
       const response = await placesService.createPlace(newPlace);
-      toast.success("Thêm nơi ở thành công");
+      toast.success("Thêm địa điểm thành công");
       window.location.href = "/place";
     }
     catch (error)

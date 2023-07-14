@@ -59,6 +59,7 @@ export const pages: Page[] = [
   { path: "/roomservice", component: AdminServicePage},
   { path: "/place", component:AdminPlacePage},
   { path: "/add-place", component:PageAddListing1},
+  { path: "/edit-place/:id", component:PageAddListing2},
   //
   { path: "/checkout/:id", component: CheckOutPage },
   { path: "/api/booking/pay/success/:id", component: PaySuccessPage },

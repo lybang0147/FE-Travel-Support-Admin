@@ -185,7 +185,7 @@ const AmenitiesPageContent: FC<RecentUsersTableProps> = ({}) => {
       formData.append('name', newAmenityName);
       setIsProcessing(true);
       setIsCreateFormOpen(false);
-      await provinceService.createProvince(formData);
+      await amenitiesService.createAmenity(formData);
       toast.success('Thêm dịch vụ thành công');
       setNeedFetch(!needFetch);
     } catch (error) {
@@ -242,7 +242,7 @@ const AmenitiesPageContent: FC<RecentUsersTableProps> = ({}) => {
           title={
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                Quản lý tỉnh thành
+                Quản lý dịch vụ
               </Typography>
               <IconButton onClick={openCreateForm} sx={{ color: theme.palette.success.main }}>
                 <AddCircleOutline />

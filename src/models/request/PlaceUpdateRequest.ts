@@ -1,18 +1,18 @@
 
 interface PlaceUpdateRequest{
+    id: string;
     name: string;
     placeImage: File[];
-    stayRemoveImage: string[];
-    province: string;
-    description: String;
-    addressDescription: String;
+    removedImage: string[];
+    description: string;
+    addressDescription: string;
     latitude: number;
     longitude: number;
     timeClose: string;
     timeOpen: string;
     minPrice: number;
     maxPrice: number;
-    recommended_time: string;
+    recommendTime: string;
 }
 
 export default PlaceUpdateRequest;

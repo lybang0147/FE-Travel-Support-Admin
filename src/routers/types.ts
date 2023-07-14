@@ -68,6 +68,7 @@ export interface LocationStates {
   "/roomservice"?:{};
   "/place"?:{};
   "/add-place"?:{};
+  "/edit-place/:id"?:{};
 }
 
 export type PathName = keyof LocationStates;

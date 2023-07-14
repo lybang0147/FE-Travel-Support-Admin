@@ -326,7 +326,7 @@ const AdminPlacePageContent: FC<RecentUsersTableProps> = ({}) => {
                           }}
                           color="inherit"
                           size="small"
-                          onClick={() => window.location.href = `/admin/place/edit/${place.id}`}
+                          onClick={() => window.location.href = `/edit-place/${place.id}`}
                         >
                           <EditTwoToneIcon fontSize="small" />
                         </IconButton>

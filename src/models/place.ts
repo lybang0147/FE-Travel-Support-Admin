@@ -7,8 +7,8 @@ interface Place{
     hidden: boolean;
     placeImage: Image[];
     province: Province;
-    description: String;
-    addressDescription: String;
+    description: string;
+    addressDescription: string;
     latitude: number;
     longitude: number;
     timeClose: string;
@@ -16,7 +16,7 @@ interface Place{
     type: string;
     minPrice: number;
     maxPrice: number;
-    recommendtime: string;
+    recommendTime: string;
 }
 
 export default Place;
