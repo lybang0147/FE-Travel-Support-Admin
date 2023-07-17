@@ -186,27 +186,7 @@ const AdminPlacePageContent: FC<RecentUsersTableProps> = ({}) => {
               {blueCardCount}
             </Typography>
             <Typography variant="body2" component="div">
-              Tổng số tài khoản
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card sx={{ backgroundColor: '#4caf50', color: '#fff', width: 300 }}>
-          <CardContent>
-            <Typography variant="h5" component="div">
-              {greenCardCount}
-            </Typography>
-            <Typography variant="body2" component="div">
-              Tài khoản đang hoạt động
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card sx={{ backgroundColor: '#f44336', color: '#fff', width: 300 }}>
-          <CardContent>
-            <Typography variant="h5" component="div">
-              {redCardCount}
-            </Typography>
-            <Typography variant="body2" component="div">
-              Tài khoản bị khóa
+              Tổng số địa điểm
             </Typography>
           </CardContent>
         </Card>

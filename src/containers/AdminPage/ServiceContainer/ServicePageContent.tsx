@@ -127,7 +127,7 @@ const AdminServicePageContent: FC<RecentUsersTableProps> = ({}) => {
     try {
       setIsProcessing(true);
       handleDeleteDialogClose();
-      await amenitiesService.deleteAmenity(selectedAmenityId);
+      await serviceRoomService.deleteRoomService(selectedAmenityId);
       toast.success('Xóa dịch vụ thành công');
       setNeedFetch(!needFetch);
     } catch (error) {

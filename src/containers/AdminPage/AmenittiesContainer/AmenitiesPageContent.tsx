@@ -157,13 +157,9 @@ const AmenitiesPageContent: FC<RecentUsersTableProps> = ({}) => {
 
   const saveEditedAmenityName = async () => {
     try {
-      const formData = new FormData();
-      if (editedImageFile) {
-        formData.append("file", editedImageFile);
-      }
       if (editedAmenity?.id) {
         setIsProcessing(true);
-        await amenitiesService.updateAmenity(editedAmenity?.id, formData);
+        await amenitiesService.updateAmenity(editedAmenity?.id, editedAmenityName);
       }
       toast.success(`Cập nhật dịch vụ thành công`);
     } catch (error) {
@@ -291,7 +287,7 @@ const AmenitiesPageContent: FC<RecentUsersTableProps> = ({}) => {
                           <EditTwoToneIcon fontSize="small" />
                         </IconButton>
                       </Tooltip>
-                      <Tooltip title="Xóa tỉnh thành" arrow>
+                      <Tooltip title="Xóa dịch vụ" arrow>
                         <IconButton
                           sx={{
                             '&:hover': { background: theme.palette.error.light },
@@ -314,7 +310,7 @@ const AmenitiesPageContent: FC<RecentUsersTableProps> = ({}) => {
         <Box p={2}>
           <TablePagination
             component="div"
-            count={paginatedAmenities.length}
+            count={amenities.length}
             onPageChange={handlePageChange}
             onRowsPerPageChange={handleLimitChange}
             page={page}
@@ -356,11 +352,6 @@ const AmenitiesPageContent: FC<RecentUsersTableProps> = ({}) => {
               onChange={handleUploadImage}
               hidden
             />
-            <label htmlFor="province-image-input">
-              <Button variant="contained" component="span">
-                Chọn hình ảnh
-              </Button>
-            </label>
             {editedImageLink && (
               <img
                 src={editedImageLink}

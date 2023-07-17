@@ -33,7 +33,7 @@ const amenitiesService = {
           });
       },
 
-      updateAmenity: async (id:string, data: FormData) => {
+      updateAmenity: async (id:string, name: string) => {
         return (await axiosService())({
           method: "PATCH",
           url: `${AMENITIES}/${id}`,
@@ -41,7 +41,7 @@ const amenitiesService = {
             accept: "application/json",
             "Content-Type": "multipart/form-data",
           },
-          data: data,
+          params: {name},
         })
           .then((res) => res.data)
           .catch((error) => {

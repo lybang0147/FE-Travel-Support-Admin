@@ -33,6 +33,16 @@ const serviceRoomService = {
             .catch((error) => {
               throw error;
             });
+    },
+    deleteRoomService: async(id: string): Promise<any> => {
+      return (await axiosService())({
+        method: "DELETE",
+        url: `${ROOM_SERVICE}/${id}`,
+      })
+        .then((res) => res.data)
+        .catch((error) => {
+          throw error;
+        });
     }
 }
 
